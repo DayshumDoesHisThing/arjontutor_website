@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjon Tutor - Online Tutoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2D0D0B; /* Dark Maroon Background */
+            transition: background 0.5s ease;
+        }
+
+        h1, h2 {
+            margin: 0;
+            text-align: center;
+            color: #F5E6E1; /* Lightened text for readability */
+        }
+
+        .section {
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.1); /* Transparent background so the dark maroon shows through */
+            border-radius: 10px;
+            border: 3px solid black; /* Solid black border for all boxes */
+            margin: 20px;
+            transition: background-color 1s ease;
+        }
+
+        /* Header Title Styles */
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            color: #B7CFA5; /* Light olive for readability */
+            margin-top: 20px; /* Move higher than the rest */
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5em;
+            color: #A9BA93; /* Lightened dark olive green */
+            margin-top: 10px;
+            margin-bottom: 50px; /* Move higher than the rest */
+        }
+
+        /* Section 1 */
+        .section1 .header-box {
+            display: inline-block;
+            padding: 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25em;
+            background-color: rgba(173, 235, 173, 0.5); /* Light olive green with transparency */
+            color: #6B8E23; /* Light olive green for readability */
+            border: 3px solid black; /* Solid black border */
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .section1 .header-box:hover {
+            transform: scale(1.1);
+        }
+
+        .content-box {
+            border: 3px solid black; /* Solid black border */
+            background-color: rgba(173, 235, 173, 0.5); /* Light olive green with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .content-box p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            color: #A0A9B0; /* Lighter navy green for readability */
+        }
+
+        /* Section 2 */
+        .section2 .header-box {
+            display: inline-block;
+            padding: 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25em;
+            background-color: rgba(184, 134, 11, 0.5); /* Light brown with transparency */
+            color: #D2B48C; /* Lighter dark brown */
+            border: 3px solid black; /* Solid black border */
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .section2 .header-box:hover {
+            transform: scale(1.1);
+        }
+
+        .section2 .content-box {
+            border: 3px solid black; /* Solid black border */
+            background-color: rgba(184, 134, 11, 0.5); /* Light brown with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .section2 .content-box ul {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            color: #D2B48C; /* Lighter dark brown for readability */
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .section2 .content-box ul li::before {
+            content: "-";
+            margin-right: 10px;
+        }
+
+        /* Section 3 */
+        .section3 .header-box {
+            display: inline-block;
+            padding: 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25em;
+            background-color: rgba(255, 204, 0, 0.5); /* Light yellow with transparency */
+            color: #FFE77A; /* Lighter dark yellow for readability */
+            border: 3px solid black; /* Solid black border */
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .section3 .header-box:hover {
+            transform: scale(1.1);
+        }
+
+        .section3 .content-box {
+            border: 3px solid black; /* Solid black border */
+            background-color: rgba(255, 204, 0, 0.5); /* Light yellow with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .section3 .content-box p {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            color: #FFE77A; /* Lighter dark yellow for readability */
+        }
+
+        /* Section 4 */
+        .section4 .header-box {
+            text-align: center;
+        }
+
+        .form-container {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+            border-radius: 10px;
+            border: 3px solid black; /* Solid black border */
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .form-container input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 3px solid black; /* Solid black border */
+            margin-top: 10px;
+            color: black; /* Dark black text */
+            background-color: #fff; /* White background for better contrast */
+        }
+
+        /* PayPal button container */
+        #paypal-button-container-P-812258830B674110DM34SXKQ {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: gray;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+            color: white;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Background Gradients for sections */
+        .section1, .section2, .section3, .section4, .section5 {
+            background-color: transparent; /* Make sections transparent so background shows through */
+        }
+    </style>
+
+    <script>
+        // Dark and Light Theme Syncing based on User's Device Theme
+        window.addEventListener('DOMContentLoaded', () => {
+            const theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                const newTheme = e.matches ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', newTheme);
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header Title Section -->
+    <section class="section section1">
+        <h1 class="title">Arjon Tutor</h1>
+        <h2 class="subtitle">SHSAT Tutoring For Only $75/month!</h2>
+
+        <!-- Section 1 Content -->
+        <div class="header-box">About Arjon Tutor</div>
+        <div class="content-box">
+            <p>Sign up your child at Arjon Tutor for SHSAT Preparation. This tutoring service was opened by us, a group of students that attend the specialized high schools in NYC, which are one of the most esteemed high schools in the US. We too took the SHSAT and got high scores, which let us get into these schools, and we believe that most other tutoring programs for the SHSAT are very overpriced, which is why we have opened our very own one that offers tutoring for the low price of $75/month.</p>
+        </div>
+    </section>
+
+    <!-- Section 2 Content -->
+    <section class="section section2">
+        <div class="header-box">What Arjon Tutor Offers</div>
+        <div class="content-box">
+            <ul>
+                <li>40 Math and 40 ELA questions every week</li>
+                <li>Comprehensive video and written explanations for questions on the assignments</li>
+                <li>High-quality and handpicked monthly SHSAT practice tests</li>
+                <li>Private tutoring on Google Meets/Zoom Calls for 30 minutes to an hour every week</li>
+                <li>Help with your student’s high school applications</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 3 Content -->
+    <section class="section section3">
+        <div class="header-box">What Will Happen After You Sign Up</div>
+        <div class="content-box">
+            <p>At Arjon Tutor, when you sign up your child, classes will BEGIN October 26th, 2024, on the last Saturday of October. During the first month, we will introduce your children to the SHSAT and what type of content they can expect, and assign 17 ELA and 17 MATH questions on a Google Classroom every week. We will also include video explanations as well as written explanations for topics they don’t understand or hard questions. These videos will be handpicked by us from a curated collection of SHSAT prep videos that helped us get into Stuyvesant.</p>
+        </div>
+    </section>
+
+    <!-- Section 4: PayPal Subscription Form -->
+    <section class="section section4">
+        <div class="header-box">
+            <h2>Sign Up for $75/month</h2>
+        </div>
+        <div class="form-container">
+            <h3>Enter your and your child’s credentials below to subscribe:</h3>
+            <form id="signup-form">
+                <input type="text" id="child-name" placeholder="Child’s Name" required><br>
+                <input type="text" id="parent-name" placeholder="Parent’s Name" required><br>
+                <input type="text" id="parent-phone" placeholder="Parent’s Phone Number and Email" required><br>
+                <input type="email" id="child-email" placeholder="Child’s Email" required><br>
+                <input type="text" id="child-strengths" placeholder="Learning Weaknesses And Strengths" required><br>
+            </form>
+
+            <!-- PayPal button container -->
+            <div id="paypal-button-container-P-812258830B674110DM34SXKQ"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AQpzKA-rro9x-VF_Rc-81kg0ab5xDAZ5GFB550ATN3loa7j6iYQ2SERtnbvoNWYT2-T3yg5LXqq9fY_v&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+            <script>
+              paypal.Buttons({
+                  style: {
+                      shape: 'rect',
+                      color: 'gold',
+                      layout: 'vertical',
+                      label: 'subscribe'
+                  },
+                  createSubscription: function(data, actions) {
+                    return actions.subscription.create({
+                      /* Creates the subscription */
+                      plan_id: 'P-812258830B674110DM34SXKQ'
+                    });
+                  },
+                  onApprove: function(data, actions) {
+                    alert(data.subscriptionID); // You can add optional success message for the subscriber here
+                  }
+              }).render('#paypal-button-container-P-812258830B674110DM34SXKQ'); // Renders the PayPal button
+            </script>
+        </div>
+    </section>
+
+    <!-- New Section: Post-October Enrollment Notice -->
+    <section class="section section5">
+        <div class="header-box">Post-October Enrollment Notice</div>
+        <div class="content-box">
+            <p>If you are subscribing after October 26, 2024, looking to join Arjon Tutor later on, please know that your child will just be put into the existing curriculum and there won’t be any extra accommodations for them.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright 2024 Arjon Tutor</p>
+        <p>Contact me at <a href="tel:9296060914">929-606-0914</a> or at <a href="mailto:faiyaj.hasan@icloud.com">faiyaj.hasan@icloud.com</a></p>
+        <p>Follow us on Instagram and Facebook at <a href="https://instagram.com/arjon_tutor_official" target="_blank">@arjon_tutor_official</a></p>
+    </footer>
+
+</body>
+</html>
