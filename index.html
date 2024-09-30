@@ -226,7 +226,7 @@
         <h2 class="subtitle">SHSAT Tutoring For Only $75/month!</h2>
 
         <!-- Section 1 Content -->
-        <div class="header-box">About Arjon Tutor</div>
+        <div class="header-box" style="color: #00ff00;">About Arjon Tutor</div> <!-- Changed to light green text -->
         <div class="content-box">
             <p>Sign up your child at Arjon Tutor for SHSAT Preparation. This tutoring service was opened by us, a group of students that attend the specialized high schools in NYC, which are one of the most esteemed high schools in the US. We too took the SHSAT and got high scores, which let us get into these schools, and we believe that most other tutoring programs for the SHSAT are very overpriced, which is why we have opened our very own one that offers tutoring for the low price of $75/month.</p>
         </div>
@@ -254,19 +254,24 @@
         </div>
     </section>
 
-    <!-- Section 4: PayPal Subscription Form -->
+    <!-- Section 4: Formspree Integration -->
     <section class="section section4">
         <div class="header-box">
             <h2>Sign Up for $75/month</h2>
         </div>
         <div class="form-container">
             <h3>Enter your and your child’s credentials below to subscribe:</h3>
-            <form id="signup-form">
-                <input type="text" id="child-name" placeholder="Child’s Name" required><br>
-                <input type="text" id="parent-name" placeholder="Parent’s Name" required><br>
-                <input type="text" id="parent-phone" placeholder="Parent’s Phone Number and Email" required><br>
-                <input type="email" id="child-email" placeholder="Child’s Email" required><br>
-                <input type="text" id="child-strengths" placeholder="Learning Weaknesses And Strengths" required><br>
+
+            <!-- Updated Formspree form -->
+            <form action="https://formspree.io/f/xjkbnard" method="POST">
+                <input type="text" id="child-name" name="child_name" placeholder="Child’s Name" required><br>
+                <input type="text" id="parent-name" name="parent_name" placeholder="Parent’s Name" required><br>
+                <input type="text" id="parent-phone" name="parent_phone" placeholder="Parent’s Phone" required><br>
+                <input type="email" id="child-email" name="child_email" placeholder="Child’s Email" required><br>
+                <input type="text" id="child-strengths" name="child_strengths" placeholder="Learning Weaknesses & Strengths" required><br>
+                <button type="submit" style="background-color: red; color: white; border-radius: 25px; padding: 10px; cursor: pointer;">
+                    Please Click This Button After Filling Out The Boxes
+                </button>
             </form>
 
             <!-- PayPal button container -->
