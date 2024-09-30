@@ -226,7 +226,7 @@
         <h2 class="subtitle">SHSAT Tutoring For Only $75/month!</h2>
 
         <!-- Section 1 Content -->
-        <div class="header-box">About Arjon Tutor</div>
+        <div class="header-box" style="color: #00ff00;">About Arjon Tutor</div> <!-- Changed to light green text -->
         <div class="content-box">
             <p>Sign up your child at Arjon Tutor for SHSAT Preparation. This tutoring service was opened by us, a group of students that attend the specialized high schools in NYC, which are one of the most esteemed high schools in the US. We too took the SHSAT and got high scores, which let us get into these schools, and we believe that most other tutoring programs for the SHSAT are very overpriced, which is why we have opened our very own one that offers tutoring for the low price of $75/month.</p>
         </div>
@@ -269,6 +269,11 @@
                 <input type="text" id="child-strengths" placeholder="Learning Weaknesses And Strengths" required><br>
             </form>
 
+            <!-- Red pill button for submitting credentials -->
+            <button id="submit-button" style="background-color: red; color: white; border-radius: 25px; padding: 10px; cursor: pointer;">
+                Please Click This Button After Filling Out The Boxes
+            </button>
+
             <!-- PayPal button container -->
             <div id="paypal-button-container-P-812258830B674110DM34SXKQ"></div>
             <script src="https://www.paypal.com/sdk/js?client-id=AQpzKA-rro9x-VF_Rc-81kg0ab5xDAZ5GFB550ATN3loa7j6iYQ2SERtnbvoNWYT2-T3yg5LXqq9fY_v&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
@@ -309,5 +314,36 @@
         <p>Follow us on Instagram and Facebook at <a href="https://instagram.com/arjon_tutor_official" target="_blank">@arjon_tutor_official</a></p>
     </footer>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("jhoNtYZN72Auk5ADU");  // Your public key from EmailJS
+        })();
+
+        document.getElementById('submit-button').addEventListener('click', function() {
+            const child_name = document.getElementById('child-name').value;
+            const parent_name = document.getElementById('parent-name').value;
+            const parent_phone = document.getElementById('parent-phone').value;
+            const child_email = document.getElementById('child-email').value;
+            const child_strengths = document.getElementById('child-strengths').value;
+
+            const templateParams = {
+                child_name: child_name,
+                parent_name: parent_name,
+                parent_phone: parent_phone,
+                child_email: child_email,
+                child_strengths: child_strengths
+            };
+
+            emailjs.send('service_x6v2ei8', 'template_hpegf0a', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    alert('Email failed to send.');
+                });
+        });
+    </script>
 </body>
 </html>
