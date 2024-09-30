@@ -254,25 +254,25 @@
         </div>
     </section>
 
-    <!-- Section 4: PayPal Subscription Form -->
+    <!-- Section 4: Formspree Integration -->
     <section class="section section4">
         <div class="header-box">
             <h2>Sign Up for $75/month</h2>
         </div>
         <div class="form-container">
             <h3>Enter your and your child’s credentials below to subscribe:</h3>
-            <form id="signup-form">
-                <input type="text" id="child_name" name="child_name" placeholder="Child’s Name" required><br>
-                <input type="text" id="parent_name" name="parent_name" placeholder="Parent’s Name" required><br>
-                <input type="text" id="parent_phone" name="parent_phone" placeholder="Parent’s Phone Number" required><br>
-                <input type="email" id="child_email" name="child_email" placeholder="Child’s Email" required><br>
-                <input type="text" id="child_strengths" name="child_strengths" placeholder="Learning Weaknesses And Strengths" required><br>
-            </form>
 
-            <!-- Red pill button for submitting credentials -->
-            <button id="submit-button" style="background-color: red; color: white; border-radius: 25px; padding: 10px; cursor: pointer;">
-                Please Click This Button After Filling Out The Boxes
-            </button>
+            <!-- Updated Formspree form -->
+            <form action="https://formspree.io/f/xjkbnard" method="POST">
+                <input type="text" id="child-name" name="child_name" placeholder="Child’s Name" required><br>
+                <input type="text" id="parent-name" name="parent_name" placeholder="Parent’s Name" required><br>
+                <input type="text" id="parent-phone" name="parent_phone" placeholder="Parent’s Phone" required><br>
+                <input type="email" id="child-email" name="child_email" placeholder="Child’s Email" required><br>
+                <input type="text" id="child-strengths" name="child_strengths" placeholder="Learning Weaknesses & Strengths" required><br>
+                <button type="submit" style="background-color: red; color: white; border-radius: 25px; padding: 10px; cursor: pointer;">
+                    Please Click This Button After Filling Out The Boxes
+                </button>
+            </form>
 
             <!-- PayPal button container -->
             <div id="paypal-button-container-P-812258830B674110DM34SXKQ"></div>
@@ -314,36 +314,5 @@
         <p>Follow us on Instagram and Facebook at <a href="https://instagram.com/arjon_tutor_official" target="_blank">@arjon_tutor_official</a></p>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("jhoNtYZN72Auk5ADU");  // Your public key from EmailJS
-        })();
-
-        document.getElementById('submit-button').addEventListener('click', function() {
-            const child_name = document.getElementById('child_name').value;
-            const parent_name = document.getElementById('parent_name').value;
-            const parent_phone = document.getElementById('parent_phone').value;
-            const child_email = document.getElementById('child_email').value;
-            const child_strengths = document.getElementById('child_strengths').value;
-
-            const templateParams = {
-                child_name: child_name,
-                parent_name: parent_name,
-                parent_phone: parent_phone,
-                child_email: child_email,
-                child_strengths: child_strengths
-            };
-
-            emailjs.send('service_x6v2ei8', 'template_hpegf0a', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Email sent successfully!');
-                }, function(error) {
-                    console.error('FAILED...', error);
-                    alert('Email failed to send.');
-                });
-        });
-    </script>
 </body>
 </html>
