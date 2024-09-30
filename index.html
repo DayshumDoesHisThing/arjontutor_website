@@ -262,11 +262,11 @@
         <div class="form-container">
             <h3>Enter your and your child’s credentials below to subscribe:</h3>
             <form id="signup-form">
-                <input type="text" id="child-name" placeholder="Child’s Name" required><br>
-                <input type="text" id="parent-name" placeholder="Parent’s Name" required><br>
-                <input type="text" id="parent-phone" placeholder="Parent’s Phone Number and Email" required><br>
-                <input type="email" id="child-email" placeholder="Child’s Email" required><br>
-                <input type="text" id="child-strengths" placeholder="Learning Weaknesses And Strengths" required><br>
+                <input type="text" id="child_name" name="child_name" placeholder="Child’s Name" required><br>
+                <input type="text" id="parent_name" name="parent_name" placeholder="Parent’s Name" required><br>
+                <input type="text" id="parent_phone" name="parent_phone" placeholder="Parent’s Phone Number" required><br>
+                <input type="email" id="child_email" name="child_email" placeholder="Child’s Email" required><br>
+                <input type="text" id="child_strengths" name="child_strengths" placeholder="Learning Weaknesses And Strengths" required><br>
             </form>
 
             <!-- Red pill button for submitting credentials -->
@@ -321,11 +321,11 @@
         })();
 
         document.getElementById('submit-button').addEventListener('click', function() {
-            const child_name = document.getElementById('child-name').value;
-            const parent_name = document.getElementById('parent-name').value;
-            const parent_phone = document.getElementById('parent-phone').value;
-            const child_email = document.getElementById('child-email').value;
-            const child_strengths = document.getElementById('child-strengths').value;
+            const child_name = document.getElementById('child_name').value;
+            const parent_name = document.getElementById('parent_name').value;
+            const parent_phone = document.getElementById('parent_phone').value;
+            const child_email = document.getElementById('child_email').value;
+            const child_strengths = document.getElementById('child_strengths').value;
 
             const templateParams = {
                 child_name: child_name,
